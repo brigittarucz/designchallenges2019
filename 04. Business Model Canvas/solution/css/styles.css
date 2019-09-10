@@ -1,0 +1,220 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.bmc {
+  display: grid;
+  padding: 2px;
+}
+
+.bmc,
+.bmc>article {
+  background: #fff;
+}
+
+.bmc>article {
+  display: grid;
+  position: relative;
+  gap: 10px;
+  grid-template-rows: 30px;
+  grid-auto-rows: 65px;
+  padding: 8px;
+  box-shadow: 0 0 0 2px;
+}
+
+.bmc h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #5b5b5b;
+}
+
+/* Disregards the .notes container entirely and lets the children participate in the grid or flex layout */
+.bmc>article .notes {
+  display: contents;
+}
+
+.note {
+  padding: 15px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Style resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: 0;
+}
+
+a {
+  color: currentColor;
+  transition: 0.2s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.3em 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  width: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .bmc {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, minmax(150px, max-content));
+  }
+
+  .key-partners {
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+  }
+
+  .key-activities {
+    grid-column: 3/span 2;
+    grid-row: 1/span 1;
+  }
+
+  .key-resources {
+    grid-column: 3/span 2;
+    grid-row: 2/span 1;
+  }
+
+  .value-proposition {
+    grid-column: 5/span 2;
+    grid-row: 1/span 2;
+  }
+
+  .cost-structure {
+    grid-column: 1/span 6;
+    grid-row: 3/span 2;
+  }
+
+  .customer-relationship {
+    grid-column: 1/span 3;
+    grid-row: 5/span 1;
+  }
+
+  .channels {
+    grid-column: 1/span 3;
+    grid-row: 6/span 1;
+  }
+
+  .customer-segments {
+    grid-column: 4/span 3;
+    grid-row: 5/span 2;
+  }
+
+  .revenue-streams {
+    grid-column: 1/span 6;
+    grid-row: 7/span 1;
+  }
+
+  .revenue-streams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px repeat(4, 1fr)
+  }
+
+  .revenue-streams h3 {
+    grid-column: 1/span 3;
+  }
+
+  .revenue-streams li:nth-of-type(3) {
+    grid-column: 1/span 1;
+    grid-row: 3/span 1;
+  }
+
+  .revenue-streams li:nth-of-type(4) {
+    grid-column: 2/span 1;
+    grid-row: 3/span 1;
+  }
+
+}
+
+@media screen and (min-width: 1068px) {
+  .bmc {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, minmax(150px, max-content));
+  }
+
+  .key-partners {
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+  }
+
+  .key-activities {
+    grid-column: 3/span 2;
+    grid-row: 1/span 1;
+  }
+
+  .key-resources {
+    grid-column: 3/span 2;
+    grid-row: 2/span 1;
+  }
+
+  .value-proposition {
+    grid-column: 5/span 2;
+    grid-row: 1/span 2;
+  }
+
+  .cost-structure {
+    grid-column: 1/span 6;
+    grid-row: 3/span 1;
+  }
+
+  .customer-relationship {
+    grid-column: 7/span 2;
+    grid-row: 1/span 1;
+  }
+
+  .channels {
+    grid-column: 7/span 2;
+    grid-row: 2/span 1;
+  }
+
+  .customer-segments {
+    grid-column: 9/span 2;
+    grid-row: 1/span 2;
+  }
+
+  .revenue-streams {
+    grid-column: 6/span 5;
+    grid-row: 3/span 1;
+  }
+
+}
