@@ -1,0 +1,49 @@
+.card {
+  width: 60vmin;
+  height: 60vmin;
+  background: #219388;
+  outline: 5px solid white;
+  outline-offset: 10px;
+  -webkit-clip-path: polygon(-131px 103px, -29.76% -43px, 117px -49px, 26.1% -1.05%, 101.47% -1.15%, 101.69% 76.09%, 117.66% 75.73%, 530px 110.93%, 334px 499px, 335px 453px, -8px 458px, -4px 105px);
+  clip-path: polygon(-131px 103px, -29.76% -43px, 117px -49px, 26.1% -1.05%, 101.47% -1.15%, 101.69% 76.09%, 135.47% 75.51%, 611px 110.93%, 334px 499px, 335px 453px, -8px 458px, -4px 105px);
+}
+
+/* not displaying the same in Chrome as in Firefox? */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 4vmin 5vmin;
+  font-size: 7.75vmin;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin: 0;
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+footer {
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-style: italic;
+  line-height: 1.1;
+  color: #fff;
+  font-size: 5.75vmin;
+  margin-top: auto;
+}
+
+/* Demo set up */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #26438b;
+}
